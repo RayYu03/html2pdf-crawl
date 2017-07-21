@@ -63,6 +63,7 @@ def save_pdf(htmls):
 
 htmls = []
 
+# Tips: 需要使用enumerate标注每个url对应的index，同时用join命名文件名，存为一个新的文件
 for index, url in enumerate(get_url_list()):
     html = parse_url_to_html(url)
     f_name = ".".join([str(index), "html"])
